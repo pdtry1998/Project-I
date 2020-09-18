@@ -56,7 +56,7 @@ class _FirstState extends State<First> {
       title: Text('อำเภอเมือง'),
       onTap: () {
         MaterialPageRoute route =
-            MaterialPageRoute(builder: (value) => MenuOne());
+            MaterialPageRoute(builder: (value) => Menu_Mueang());
         Navigator.push(context, route);
       },
     );

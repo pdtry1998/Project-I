@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project1/screens/First.dart';
+import 'package:project1/widget/Mueang/Icons/menuFour.dart';
 // import 'package:project1/screens/home.dart';
 // import 'package:project1/utility/my_style.dart';
 
@@ -58,7 +60,7 @@ class _MenuOneState extends State<MenuOne> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.teal,
-        title: Text("555555555"),
+        title: Text("อำเภอเมือง"),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -96,25 +98,84 @@ class _MenuOneState extends State<MenuOne> {
             ),
             Container(
               width: double.infinity,
-              height: 250.0,
+              height: 300.0,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MovieCard("JOKER", "8.5/10", "images/pic1.jpg"),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child: MovieCard("JOKER", "8.5/10", "images/pic1.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MovieCard("Avengers", "8.5/10", "images/pic1.jpg"),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child:
+                            MovieCard("Avengers", "8.5/10", "images/pic1.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MovieCard("Terminator", "8.5/10", "images/pic1.jpg"),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child: MovieCard(
+                            "Terminator", "8.5/10", "images/pic1.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MovieCard("Terminator", "8.5/10", "images/pic1.jpg"),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child: MovieCard(
+                            "Terminator", "8.5/10", "images/pic1.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
                   ),
                 ],
               ),
@@ -142,30 +203,85 @@ class _MenuOneState extends State<MenuOne> {
             ),
             Container(
               width: double.infinity,
-              height: 250.0,
+              height: 300.0,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MovieCard("JOKER", "7.5/10", "images/pic1.jpg"),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child: MovieCard("JOKER", "8.5/10", "images/pic1.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child:
-                        MovieCard("Interstellar", "9.5/10", "images/pic1.jpg"),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child:
+                            MovieCard("Avengers", "8.5/10", "images/pic1.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MovieCard("Terminator", "8.5/10", "images/pic1.jpg"),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child: MovieCard(
+                            "Terminator", "8.5/10", "images/pic1.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                    child: MovieCard("Terminator", "8.5/10", "images/pic1.jpg"),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child: MovieCard(
+                            "Terminator", "8.5/10", "images/pic1.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
                   ),
-                  SizedBox(
-                    height: 22.0,
-                  )
                 ],
               ),
             ),

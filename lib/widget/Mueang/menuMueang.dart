@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project1/widget/Mueang/Icons/menuOne.dart';
+import 'package:project1/widget/Mueang/Icons/menuThree.dart';
+import 'package:project1/widget/Mueang/Icons/menuTwo.dart';
 
 class Menu_Mueang extends StatelessWidget {
   @override
@@ -67,7 +69,7 @@ class Menu_Mueang extends StatelessWidget {
                       ListTile(
                         onTap: () => Navigator.of(context).push(
                             MaterialPageRoute(
-                                builder: (BuildContext) => MenuOne())),
+                                builder: (BuildContext) => MenuTwo())),
                       )
                     ],
                   ),
@@ -98,7 +100,7 @@ class Menu_Mueang extends StatelessWidget {
                       ListTile(
                         onTap: () => Navigator.of(context).push(
                             MaterialPageRoute(
-                                builder: (BuildContext) => MenuOne())),
+                                builder: (BuildContext) => MenuThree())),
                       )
                     ],
                   ),
