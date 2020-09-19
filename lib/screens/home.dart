@@ -12,9 +12,22 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      drawer: showDrawer(),
-    );
+        appBar: AppBar(),
+        drawer: showDrawer(),
+        body: Container(
+          margin: MediaQuery.of(context)
+              .padding, //ปรับระยะขอบบนไม่ให้ล้ำไปที่ไอค่อนข้างบน
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                "images/LOGO.png",
+                height: 400,
+                width: 400,
+              ),
+            ],
+          ),
+        ));
   }
 
   Drawer showDrawer() => Drawer(
@@ -25,7 +38,7 @@ class _HomeState extends State<Home> {
 
   ListTile signInMenu() {
     return ListTile(
-      leading: Icon(Icons.android),
+      leading: Icon(Icons.account_box),
       title: Text('Sign In'),
       onTap: () {
         MaterialPageRoute route =
@@ -37,7 +50,7 @@ class _HomeState extends State<Home> {
 
   ListTile signUpMenu() {
     return ListTile(
-      leading: Icon(Icons.android),
+      leading: Icon(Icons.create),
       title: Text('Sign Up'),
       onTap: () {
         MaterialPageRoute route =
