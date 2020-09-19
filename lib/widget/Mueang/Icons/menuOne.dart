@@ -105,27 +105,9 @@ class _MenuOneState extends State<MenuOne> {
                   Column(
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                        child: MovieCard("JOKER", "8.5/10", "images/pic1.jpg"),
-                      ),
-                      RaisedButton(
-                          child: Text('Enter'),
-                          onPressed: () {
-                            Navigator.push(
-                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
-                          })
-                    ],
-                  ),
-                  Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                        child:
-                            MovieCard("Avengers", "8.5/10", "images/pic1.jpg"),
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: MovieCard("เย็นตาโฟสามพี่น้อง",
+                            "ถนน ดีบุก ภูเก็ต", "images/food1.jpg"),
                       ),
                       RaisedButton(
                           child: Text('Enter'),
@@ -144,7 +126,7 @@ class _MenuOneState extends State<MenuOne> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 12.0),
                         child: MovieCard(
-                            "Terminator", "8.5/10", "images/pic1.jpg"),
+                            "หมี่สามสาว", "ถนน ตะกั่วป่า", "images/food2.jpg"),
                       ),
                       RaisedButton(
                           child: Text('Enter'),
@@ -163,7 +145,26 @@ class _MenuOneState extends State<MenuOne> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 12.0),
                         child: MovieCard(
-                            "Terminator", "8.5/10", "images/pic1.jpg"),
+                            "ลอดช่อง หล่องโรง", "ถนนพัฒนา", "images/food3.jpg"),
+                      ),
+                      RaisedButton(
+                          child: Text('Enter'),
+                          onPressed: () {
+                            Navigator.push(
+                                // ส่วนที่ทำให้กดลิ้งไปหน้า MenuDistrict
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        First())); // เป็นการลิ้งแบบที่ 2 ไปยังหน้า MenuDistrict
+                          })
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                        child: MovieCard(
+                            " แม่โบ้ขนมครก", "ถนนเยาวราช", "images/pic1.jpg"),
                       ),
                       RaisedButton(
                           child: Text('Enter'),
@@ -300,7 +301,7 @@ class _MenuOneState extends State<MenuOne> {
             elevation: 0.0,
             child: Image.asset(
               imgPath,
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
               width: 130.0,
               height: 160.0,
             ),
@@ -313,13 +314,13 @@ class _MenuOneState extends State<MenuOne> {
             style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.normal,
-                fontSize: 26.0),
+                fontSize: 20.0),
             textAlign: TextAlign.start,
           ),
           SizedBox(height: 5.0),
           Text(
             rate,
-            style: TextStyle(color: Colors.red, fontSize: 18.0),
+            style: TextStyle(color: Colors.blue, fontSize: 16.0),
           ),
         ],
       ),
