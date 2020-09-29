@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'package:project1/screens/signIn.dart';
 import 'package:project1/screens/signUp.dart';
 import 'package:project1/utility/my_style.dart';

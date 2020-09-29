@@ -18,7 +18,7 @@ class _SignUpState extends State<SignUp> {
         title: Text('Sign Up'),
       ),
       body: ListView(
-        padding: EdgeInsets.all(30.0), // ขนาดรูป
+        padding: EdgeInsets.all(30.0), // ระยะห่าง บ ซ ข ล รูป
         children: <Widget>[
           myLogo(),
           MyStyle().mySizebox(), // จัดอย่าให้ตัวอักษรชิดกับรูปเกิน
@@ -63,12 +63,12 @@ class _SignUpState extends State<SignUp> {
   //  ],
   // );
 
-  Widget registerButton() => Container(
+  Widget registerButton() => Container( // ปุ่มregister
         width: 250.0,
         child: RaisedButton(
           color: MyStyle().darkColor,
           onPressed: () {
-            print('name = $name user = $user password = $password ');
+            print('name = $name user = $user password = $password '); //$เอาvalueมาโช
             if (name == null ||
                 name.isEmpty ||
                 user == null ||
@@ -112,16 +112,16 @@ class _SignUpState extends State<SignUp> {
       Response response = await Dio().get(url);
       print('res = $response');
 
-      if (response.toString() == 'true') {
+      if (response.toString() == 'true') { // สมัครเสดถ้าขึ้นตัวอักษร true กลับไปหาหน้าทีแรก
         Navigator.pop(context);
       } else {
-        normalDialog(context, 'ไม่สามารถ สมัครสมาชิกได้ กรุณาลองใหม่');
+        normalDialog(context, 'ไม่สามารถ สมัครสมาชิกได้ กรุณาลองใหม่'); //
       }
     } catch (e) {}
   }
 
-  Widget nameForm() => Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+  Widget nameForm() => Row( //ช่องName
+        mainAxisAlignment: MainAxisAlignment.center, //ปรับขนาดช่องให้เท่ากับ 250
         children: <Widget>[
           Container(
             width: 250.0,
@@ -146,7 +146,7 @@ class _SignUpState extends State<SignUp> {
         ],
       );
 
-  Widget userForm() => Row(
+  Widget userForm() => Row( // ช่อง user
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
@@ -171,7 +171,7 @@ class _SignUpState extends State<SignUp> {
         ],
       );
 
-  Widget passwordForm() => Row(
+  Widget passwordForm() => Row( //ช่องpassword
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Container(
@@ -196,7 +196,7 @@ class _SignUpState extends State<SignUp> {
         ],
       );
 
-  Row showAppName() {
+  Row showAppName() { // ชื่อหัวข้อหน้า signup
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -205,7 +205,7 @@ class _SignUpState extends State<SignUp> {
     );
   }
 
-  Widget myLogo() => Row(
+  Widget myLogo() => Row(  // ปรับขนาดโลโก้ ในListView
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           MyStyle().showLogo(),

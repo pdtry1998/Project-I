@@ -22,12 +22,12 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         title: Text('Sign In'),
       ),
-      body: Container(
+      body: Container( // พื้นหลัง
         decoration: BoxDecoration(
           gradient: RadialGradient(
             colors: <Color>[Colors.white, MyStyle().primaryColor],
             center: Alignment(0, -0.3),
-            radius: 1.0,
+            radius: 1.0, //กำหนดความสว่างพื้นหลัง
           ),
         ),
         child: Center(
@@ -52,8 +52,7 @@ class _SignInState extends State<SignIn> {
     );
   }
 
-  Widget loginButton() => Container(
-        width: 250.0,
+  Widget loginButton() => Container( //ปุ่ม login
         child: RaisedButton(
           color: MyStyle().darkColor,
           onPressed: () {
@@ -83,6 +82,7 @@ class _SignInState extends State<SignIn> {
       var result = json.decode(response
           .data); // แปลงรหัสจากชื่อที่เป็นภาษาไทยไม่ให้เป็นภาษาต่างด้าว จาก \u0e2a\u0e21\u0e1b\u0e2d\u0e07 ให้เป็นภาษาไทย
       print('result = $result');
+
       for (var map in result) {
         UserModel userModel = UserModel.fromJson(map);
         if (password == userModel.password) {
@@ -97,7 +97,7 @@ class _SignInState extends State<SignIn> {
     } catch (e) {}
   }
 
-  Widget userForm() => Container(
+  Widget userForm() => Container( // ช่องเก็บค่าต่างๆ
         width: 250.0,
         child: TextField(
           onChanged: (value) => user = value.trim(),
@@ -109,7 +109,7 @@ class _SignInState extends State<SignIn> {
             labelStyle: TextStyle(color: MyStyle().darkColor),
             labelText: 'User:',
             // ใส่กรอบ ช่อง login
-            enabledBorder: OutlineInputBorder(
+            enabledBorder: OutlineInputBorder( // ถ้าอยู่ในสภาพโฟกัส
                 borderSide: BorderSide(color: MyStyle().darkColor)),
             focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: MyStyle().primaryColor)),

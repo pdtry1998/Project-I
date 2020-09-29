@@ -5,12 +5,12 @@ class MyStyle {
   Color primaryColor = Colors.teal.shade200;
   Color darkColor2 = Colors.white;
 
-  SizedBox mySizebox() => SizedBox(
+  SizedBox mySizebox() => SizedBox( //เมดทอดกำหนดระยะห่างระหว่างช่อง
         width: 8.0,
         height: 16.0,
       );
 
-  Text showTitle(String title) => Text(
+  Text showTitle(String title) => Text( //เมดทอดหัวเรื่อง = travel
         title,
         style: TextStyle(
           fontSize: 24.0,
@@ -26,7 +26,7 @@ class MyStyle {
     );
   }
 
-  Container showLogo() {
+  Container showLogo() { // เมดทอดรูปโลโก้
     return Container(
       width: 300.0,
       child: Image.asset('images/LOGO.png'),
